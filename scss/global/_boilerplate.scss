@@ -1,0 +1,31 @@
+@use '../utilities' as u;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none; 
+  line-height: 1;
+}
+
+html {
+  font-size: 62%;
+}
+
+body {
+  height: 100vh;
+  background-color: u.$clr-dark;
+}
+
+a {
+  appearance: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+select {
+  font-size: inherit;
+  font-family: inherit;
+}

@@ -1,0 +1,67 @@
+// Color
+$clr-light: hsl(62, 57%, 65%);
+$clr-dark: hsl(84, 39%, 25%);
+$clr-accent-light: hsl(67, 72%, 44%);
+$clr-accent-dark: hsl(23, 61%, 26%);
+
+
+// Font size
+$fs-h1: clamp(2.7rem, 2.3rem + 0.7vw, 3.5rem);
+$fs-h2: clamp(2rem, 1.8rem + 0.5vw, 2.7rem);
+$fs-form: clamp(1.8rem, 1.5rem + 0.4vw, 2.2rem);
+$fs-hud: clamp(2.0rem, 1.7rem + 0.5vw, 2.4rem);
+$fs-btn: clamp(1.8rem, 1.6rem + 0.4vw, 2.4rem);
+$fs-timer: clamp(2.8rem, 2.5rem + 0.8vw, 3.5rem);
+$fs-word: clamp(3rem, 2.5rem + 0.9vw, 3.5rem);
+$fs-word-input: clamp(2rem, 1.7rem + 0.5vw, 2.7rem);
+$fs-modal: clamp(1.6rem, 1.4rem + 0.4vw, 2.1rem);
+$fs-table-header: clamp(1.8rem, 1.5rem + 0.5vw, 2.3rem);
+$fs-table-items: clamp(1.6rem, 1.4rem + 0.4vw, 2.1rem);
+$fs-notification: clamp(1.9rem, 1.5rem + 0.5vw, 2.4rem);
+
+// $fs-lg: clamp(2.8rem, 2.5rem + 0.8vw, 3.5rem);
+// $fs-md: clamp(2rem, 1.7rem + 0.5vw, 2.7rem);
+// $fs-sm: clamp(1.6rem, 1.4rem + 0.4vw, 2.1rem);
+
+
+// Font weight
+$fw-reg: 400;
+$fw-bold: 600;
+
+
+// Spacing
+$spc-xs: clamp(0.5rem, 0.2rem + 0.4vw, 1rem);
+$spc-sm: calc($spc-xs * 2);
+$spc-md: calc($spc-xs * 3);
+$spc-lg: calc($spc-xs * 4);
+$spc-xl: calc($spc-xs * 5);
+
+
+// Border radius
+$radius: 0.5rem;
+
+// Box shadow
+$bs-btn: 
+  -0.1rem -0.1rem 0.1rem hsla(0, 0%, 10%, 0.5),
+  0.1rem 0.1rem 0.1rem hsla(0, 0%, 20%, 1),
+  0.2rem 0.2rem 0.2rem hsla(0, 0%, 20%, 1),
+  0.3rem 0.3rem 0.3rem hsla(0, 0%, 20%, 1),
+  0.4rem 0.4rem 0.3rem hsla(0, 0%, 20%, 1);
+
+$bs-btn-hover: 
+  -0.1rem -0.1rem 0.1rem hsla(0, 0%, 10%, 0.5),
+  0.1rem 0.1rem 0.1rem hsla(0, 0%, 20%, 0.5),
+  0.2rem 0.2rem 0.2rem hsla(0, 0%, 20%, 0.5),
+  0.3rem 0.3rem 0.3rem hsla(0, 0%, 20%, 0.5);
+
+$bs-btn-active: 
+  -0.1rem -0.1rem 0.2rem hsla(0, 0%, 10%, 0.5),
+  0.1rem 0.1rem 0.1rem hsla(0, 0%, 20%, 0.5);
+
+$bs-card: 
+  -0.1rem -0.1rem 0.6rem hsla(0, 0%, 15%, 1),
+  0.1rem 0.1rem 0.1rem hsla(0, 0%, 15%, 1),
+  0.2rem 0.2rem 0.2rem hsla(0, 0%, 15%, 1),
+  0.3rem 0.3rem 0.5rem hsla(0, 0%, 15%, 1),
+  0.4rem 0.4rem 0.6rem hsla(0, 0%, 15%, 1),
+  0.5rem 0.5rem 0.7rem hsla(0, 0%, 15%, 1);

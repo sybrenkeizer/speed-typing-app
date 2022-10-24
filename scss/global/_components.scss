@@ -1,0 +1,133 @@
+@use '../utilities' as u;
+
+.wrapper {
+  position: relative;
+  height: calc(100% - clamp(5rem, 4.5rem + 2vw, 7rem));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: u.$clr-dark;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  padding: u.$spc-xs;
+  text-align: center;
+}
+
+.fc-btn:hover {
+  color: u.$clr-accent-light;
+  box-shadow: u.$bs-btn-hover;
+  transform: translate(0.08rem, 0.1rem);
+}
+
+.fc-btn:active {
+  box-shadow: u.$bs-btn-active;
+  transform: translate(0.2rem, 0.25rem);
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: u.$clr-dark;
+  padding: u.$spc-xs;
+  border-radius: u.$radius;
+  color: u.$clr-light;
+  font-size: u.$fs-form;
+  box-shadow: u.$bs-btn;
+  transition:
+    color 0.15s ease-in-out,
+    box-shadow 0.17s ease-in-out, 
+    transform 0.17s ease-out;
+}
+
+label {
+  padding: u.$spc-xs u.$spc-md;
+}
+
+select {
+  padding: u.$spc-xs u.$spc-md;
+  background-color: u.$clr-light;
+  border: none;
+  border-radius: u.$radius;
+  color: u.$clr-dark;
+  box-shadow: u.$bs-btn;
+  cursor: pointer;
+  transition:
+    box-shadow 0.17s ease-in-out, 
+    transform 0.17s ease-out;
+}
+
+select:hover {
+  box-shadow: u.$bs-btn-hover;
+  transform: translate(0.08rem, 0.1rem);
+}
+
+.card {
+  width: clamp(30rem, 30rem + 15vw, 60rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: u.$spc-md;
+  margin-top: -5rem;
+  padding: u.$spc-lg u.$spc-xl;
+  background-color: u.$clr-light;
+  border-radius: u.$radius;
+  box-shadow: u.$bs-card;
+}
+
+.notification {
+  background-color: rgba(139, 80, 43, 0.7);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: u.$spc-lg u.$spc-xl;
+  border: 0.4rem solid rgb(109, 58, 26);
+  border-top: none;
+  border-radius: u.$radius;
+  color: #fff;
+  font-weight: u.$fw-bold;
+  font-size: u.$fs-notification;
+  text-align: center;
+  transition: 
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  
+  & p {
+    text-shadow: 
+    0 0 0.1rem #000,
+    0 0 0.1rem #000,
+    0 0 0.1rem #000,
+    0 0 0.1rem #000,
+    0 0 0.1rem #000;
+  }
+}
+
+.notification.show {
+  transform: translate(-50%, 0);
+  box-shadow: u.$bs-card;
+}
+
+.modal-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.98);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+}

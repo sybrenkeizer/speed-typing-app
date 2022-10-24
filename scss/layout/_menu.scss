@@ -1,0 +1,47 @@
+@use '../utilities' as u;
+
+.instructions-modal-wrapper.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.instructions-modal {
+  width: clamp(30rem, 30rem + 25vw, 80rem);
+  padding: 0;
+  margin-top: 0;
+
+
+  .modal-content {
+    width: 100%;
+    height: 70vh;
+    overflow: auto;
+    padding: u.$spc-xl;
+  }
+
+  &__title {
+    margin-bottom: u.$spc-xl;
+  }
+
+  &__text {
+    font-size: u.$fs-modal;
+    margin-bottom: u.$spc-xl;
+
+    p {
+      margin-block: u.$spc-lg u.$spc-sm;
+      font-weight: u.$fw-bold;
+      text-align: center;
+    }
+
+    ul {
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-block: u.$spc-xs;
+    }
+
+    li > ul {
+      margin-left: 1.7rem;
+    }
+  }
+}

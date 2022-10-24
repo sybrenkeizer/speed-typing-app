@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./dist/css/style.css" />
+		<script src="js/menu.js" defer></script>
+		<title>Main Menu</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="menu" class="menu card">
+				<h1 id="menu__title" class="menu__title title">Main Menu</h1>
+
+				<div
+					id="menu__instructions"
+					class="menu__instructions form-control fc-btn">
+					<a
+						href="#"
+						id="menu__instructions-btn"
+						class="menu__instructions-btn menu__btn btn"
+						>Instructions</a
+					>
+					<!-- Pop up modal with instructions here -->
+				</div>
+
+				<div id="menu__setup" class="menu__setup form-control fc-btn">
+					<a
+						href="./html/setup.html"
+						id="menu__setup-btn"
+						class="menu__setup-btn menu__btn btn"
+						>Setup</a
+					>
+				</div>
+
+				<div id="menu__scores" class="menu__scores form-control fc-btn">
+					<a
+						href="./html/scores.html"
+						id="menu__scores-btn"
+						class="menu__scores-btn menu__btn btn"
+						>Scores</a
+					>
+				</div>
+			</div>
+		</div>
+
+    <!-- Instructions modal -->
+    <div class="instructions-modal-wrapper modal-wrapper">
+      <div id="instructions-modal" class="instructions-modal modal card">
+
+        <div class="modal-content">
+
+          <h1 id="instructions-modal__title" class="instructions-modal__title title">Instructions</h1>
+
+          <div id="instructions-modal__text" class="instructions-modal__text">
+            <p>This is a simple speed typing practice-game</p>
+
+            <p>The objective</p>
+            <ul>
+              <li>You will be presented with numerous words passed on to you one at a time</li>
+              <li>Type the given word as fast as possible, there is limited time</li>
+              <li>Once your input matches the given word, you will be given a new word</li>
+              <li>Make sure you type the word exactly as it is given</li>
+              <li>There is a timer counting down and you should finish typing all the words before it hits zero</li>
+              <li>For each word successfully typed a few seconds will be added to the countdown, extending the time you have to finish the rest of the session</li>
+						</ul>
+
+						<p>Setup settings</p>
+						<ul>
+							<li>Various levels of difficulty can be set according to your skill. They impact:
+								<ul>
+									<li>The amount of time given at the start</li>
+                  <li>The amount of time added upon each successfully typed word</li>
+                </ul>
+              </li>
+              <li>In addition to the difficulty, other settings can be tuned to your preference as well:
+								<ul>
+									<li>Language of the words</li>
+									<li>The number of characters each word has</li>
+                  <li>The amount of words required to be typed</li>
+                </ul>
+              </li>
+						</ul>
+
+						<p>Score</p>
+						<ul>
+							<li>Your average typing time per word can be seen in the top right corner</li>
+								<li>The scoreboard is ranked on sessions that have the shortest average time of typed words</li>
+            </ul>
+
+						<p>To abort the game, press the exit button in the upper left corner</p>
+          </div>
+
+          <div id="instructions-modal__exit" class="instructions-modal__exit form-control fc-btn">
+            <a href="#" class="btn">Return to menu</a>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+	</body>
+</html>

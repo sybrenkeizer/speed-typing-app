@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <script src="../js/app.js" type="module"></script>
+  <title>Speed Typing</title>
+</head>
+<body>
+  
+  <!-- HUD -->
+  <header id="hud" class="hud">
+    <a href="#" id="hud__exit" class="hud__exit">
+      <i class="fa-solid fa-power-off"></i>
+    </a>
+    <div id="hud__progress" class="hud__progress">
+      <span id="progress-text" class="progress-text"></span>
+      <div id="progress-bar-outer" class="progress-bar-outer">
+        <div id="progress-bar-inner" class="progress-bar-inner"></div>
+      </div>
+    </div>
+    <span id="hud__avTime" class="hud__avTime"></span>
+  </header>
+  
+  <!-- Game -->
+  <div class="wrapper">
+    
+    <span id="timer" class="timer">00:34</span>
+
+    <div id="game" class="game card">
+
+      <span id="game__word" class="game__word"></span>
+    
+      <div id="game__word-input" class="game__word-input form-control">
+        <input type="text" id="word-input" class="" autocomplete="off" autofocus>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div id="exit-notification" class="exit-notification notification">
+    <p>Are you sure you want to quit?</p>
+    <div class="exit-notification__buttons">
+      <a href="#" class="btn" data-btn="deny">No</a>
+      <a href="#" class="btn" data-btn="agree">Yes</a>
+    </div>
+  </div>
+  
+  <!-- Start game modal -->
+  <div class="start-game-modal-wrapper modal-wrapper show">
+    <div id="start-game-modal" class="start-game-modal modal card">
+      <span id="start-game-modal__countdown" class="start-game-modal__countdown"></span>
+    </div>
+  </div>
+
+  <!-- End game modal -->
+  <div class="end-game-modal-wrapper modal-wrapper">
+    <div id="end-game-modal" class="end-game-modal modal card">
+      <h1 id="end-game-modal__title" class="end-game-modal__title title">
+        You have finished!
+      </h1>
+      <p id="end-game-modal__text" class="end-game-modal__text">Congratulations, you settled a new record with 49 points!<br>You've typed 25 questions in 63 seconds: an average of 2.54 seconds per word.</p>
+    
+      <div id="end-game-modal__btns" class="end-game-modal__btns">
+
+        <div class="form-control fc-btn">
+          <a href="../html/scores.html" class="btn" data-btn="scores">Show scores</a>
+        </div>
+
+        <div class="form-control fc-btn">
+          <a href="../index.html" class="btn" data-btn="menu">Return to menu</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

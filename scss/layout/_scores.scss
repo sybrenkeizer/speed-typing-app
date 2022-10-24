@@ -1,0 +1,104 @@
+@use '../utilities' as u;
+
+// TODO - make list item expandable -> adding additional data (time, difficulty level, average time per word, etc.)
+// TODO - clean up code: use more general components and variables
+// TODO - Find solution for eggy list rank numbers
+
+.scores {
+  width: clamp(30rem, 30rem + 25vw, 80rem);
+  margin-top: 0;
+  gap: 0.45rem;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: u.$spc-md;
+    
+    .btn {
+      width: 10rem;
+      // display: flex;
+      justify-content: space-around;
+      
+
+      i {
+        color: u.$clr-light;
+        transform: rotate(180deg);
+      }
+    }
+    
+    .title {
+    }
+  }
+
+
+  &__list-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 2fr;
+    padding: 1rem;
+    background-color: u.$clr-dark;
+    border-radius: u.$radius;
+    font-size: u.$fs-table-header;
+    color: u.$clr-light;
+    font-weight: u.$fw-bold;
+    box-shadow: u.$bs-card;
+    text-align: center;
+  }
+  
+  &__list {
+    width: 100%;
+    max-height: 70vh;
+    overflow: auto;
+    font-size: u.$fs-table-items;
+    
+    li {
+      width: 99%;
+      display: grid;
+      grid-template-columns: 1fr 4fr 4fr 2fr;      
+      margin-block: u.$spc-sm;
+      margin-inline: auto;
+      align-items: center;
+      padding: 1rem;
+      background-color: u.$clr-dark;
+      border-radius: u.$radius;
+      color: u.$clr-light;
+      cursor: pointer;
+      box-shadow: u.$bs-btn;
+      transition:
+        box-shadow 0.17s ease-in-out, 
+        transform 0.17s ease-out;
+      
+      & span:first-child {
+        width: 70%;
+        display: inline-block;
+        padding: 0.6em 0.1em;
+        background-color: u.$clr-light;
+        border-radius: 50%;
+        text-align: center;
+        color: u.$clr-dark;
+      }
+
+      & span:nth-child(3),
+      & span:nth-child(4) {
+        text-align: center;
+      }
+
+      &:hover {
+        box-shadow: u.$bs-btn-hover;
+        transform: translate(0.08rem, 0.1rem);
+        color: u.$clr-accent-light;
+      }
+
+      &:active {
+        box-shadow: u.$bs-btn-active;
+        transform: translate(0.2rem, 0.25rem);
+      }
+    }
+  
+
+  }
+
+
+}

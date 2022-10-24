@@ -1,0 +1,37 @@
+@use '../utilities' as u;
+
+.setup {
+
+  &__name {
+    width: 100%;
+  
+    &__input {
+      width: 65%;
+      padding: u.$spc-xs u.$spc-md;
+      background-color: u.$clr-light;
+      border: none;
+      border-radius: u.$radius;
+      color: u.$clr-dark;
+      text-align: center;
+      font-size: inherit;
+      box-shadow: u.$bs-btn;
+      transition:
+        box-shadow 0.17s ease-in-out, 
+        transform 0.17s ease-out;
+    }
+  
+    &__input:hover {
+      box-shadow: u.$bs-btn-hover;
+      transform: translate(0.08rem, 0.1rem);
+    }
+  
+    &__input:focus {
+    box-shadow: u.$bs-btn-active;
+    transform: translate(0.2rem, 0.25rem);
+    }
+  }
+
+  &__start {
+    font-weight: u.$fw-bold;
+  }
+}

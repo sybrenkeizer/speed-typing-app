@@ -1,0 +1,9 @@
+@use '../utilities/' as u;
+
+h1 {
+  font-size: u.$fs-h1;
+}
+
+h2 {
+  font-size: u.$fs-h2;
+}

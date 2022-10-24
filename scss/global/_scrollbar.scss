@@ -1,0 +1,19 @@
+@use '../utilities' as u;
+
+::-webkit-scrollbar {
+	width: 0.9rem;
+}
+::-webkit-scrollbar-thumb {
+	background-color: u.$clr-dark;
+	border: 0.3rem solid u.$clr-light;
+	border-radius: 100vw;
+}
+::-webkit-scrollbar-track {
+	background-color: u.$clr-light;
+}
+@supports (scrollbar-color: u.$clr-light u.$clr-light) {
+	* {
+		scrollbar-color: u.$clr-dark u.$clr-light;
+		scrollbar-width: auto;
+	}
+}
